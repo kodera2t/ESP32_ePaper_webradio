@@ -17,7 +17,7 @@ will update everything on the board.
 
 
 
-As same as another ESP32-ADB seriese, we can add preset station on web interface. We can add (up to 10), change or remove URL of the internet radio station by the following commands:
+As same as another ESP32-ADB series, preset station can be edit through web interface running on ESP32. Preset URL of the streaming radio station can be editby the following commands:
 
 ```
 GET /  - list stations
@@ -27,6 +27,12 @@ GET /0..9 - select station
 GET /0..9+URL - set station URL
 GET /0..-URL - remove station URL
 ```
+for example, if your board has IP address of 192.168.1.10, then accessing following address by web browser
+```
+http://192.168.1.10/1+http://beatles.purestream.net/beatles.mp3
+```
+will add new preset "1" with the address of "http://beatles.purestream.net/beatles.mp3"
+
 
 'GPIO-0' on board activate station switching to next preset station.
 
