@@ -6,7 +6,7 @@ For update binary on ePaper plus ESP32-ADB board, just execute
 make menuconfig
 ```
 
-and edit SSID and password in "Web Radio / Bluetooth Speaker" section. After that
+and edit SSID and password in "Web Radio / Bluetooth Speaker" section.(no need to touch another parts) After that
 ```
 make makefs
 make copyfs
