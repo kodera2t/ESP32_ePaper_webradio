@@ -1,4 +1,4 @@
-### Webradio application supporting ePaper(GDEH0154D27)
+### Webradio on ESP32 supporting ePaper(GDEH0154D27)
 
 For update binary on ePaper plus ESP32-ADB board, just execute
 
