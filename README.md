@@ -17,7 +17,7 @@ will update everything on the board.
 
 
 
-Add web interface. You can add (up to 10), change or remove URL of the internet radio station. 
+As same as another ESP32-ADB seriese, we can add preset station on web interface. We can add (up to 10), change or remove URL of the internet radio station by the following commands:
 
 ```
 GET /  - list stations
@@ -28,17 +28,13 @@ GET /0..9+URL - set station URL
 GET /0..-URL - remove station URL
 ```
 
-Push 'GPIO-0' switch on board to change next station.
-
-It starts up only web interface when GPIO-0 is keeped low level at boot time.
+'GPIO-0' on board activate station switching to next preset station.
 
 ----
 
-Modified for OLED display support by kodera2t
-
 Please use latest esp-idf environment (envorinment just before will make lots error)
 
-original code (w/o OLED) is
+original code (w/o OLED, ePaper) is
 https://github.com/MrBuddyCasino/ESP32_MP3_Decoder
 
 OLED display mode for WiFi Radio/Bluetooth spaker will be set by menuconfig (select BT speaker or Wifi radio)
@@ -57,14 +53,18 @@ GPIO22        - DATA
 and GPIO25/26 are fixed but GPIO22 can be re-arranged as you wish.
 (defined in components/audio_renderer.c)
 
-I2C OLED is connected, as
-ESP pin   - I2C signal
+ePaper is connected, as
+ESP pin   - ePaper signal
 ```
 ----------------------
-GPIO14   - SCL
-GPIO13   - SDA
+GPIO21   - BUSY
+GPIO16   - RESET
+GPIO17   - D/C
+GPIO4    - CS
+GPIO14   - SCLK
+GPIO15   - MOSI
 ```
-,which defined in app_main.c Please change as you wish...
+,which defined in components/epaper/EPDspi.h Please change as you wish...
 
 
 More details can be found in the original author's explanation at
