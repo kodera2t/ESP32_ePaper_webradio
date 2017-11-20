@@ -1,5 +1,20 @@
 ### Webradio application on ePaper plus ESP32-ADB board
 
+For update binary on ePaper plus ESP32-ADB board, just execute
+
+```
+make menuconfig
+```
+
+and edit SSID and password in "Web Radio / Bluetooth Speaker" section. After that
+```
+make makefs
+make copyfs
+make flashfs
+make flash
+```
+will update everything on the board.
+
 
 
 Add web interface. You can add (up to 10), change or remove URL of the internet radio station. 
@@ -13,9 +28,9 @@ GET /0..9+URL - set station URL
 GET /0..-URL - remove station URL
 ```
 
-Push 'GPIO-16' (chaned from 'boot') switch to change next station.
+Push 'GPIO-0' switch on board to change next station.
 
-It starts up only web interface when GPIO-16 is keeped low level at boot time.
+It starts up only web interface when GPIO-0 is keeped low level at boot time.
 
 ----
 
