@@ -43,12 +43,10 @@ Please use latest esp-idf environment (envorinment just before will make lots er
 original code (w/o OLED, ePaper) is
 https://github.com/MrBuddyCasino/ESP32_MP3_Decoder
 
-OLED display mode for WiFi Radio/Bluetooth spaker will be set by menuconfig (select BT speaker or Wifi radio)
-
 Bluetooth device name is defined in bt_config.h in include file folder. (default: "hogehoge_mont")
 
 ----
-Wiring is same as original, as
+Wiring to DAC is same as original, as
 ESP pin   - I2S signal
 ```
 ----------------------
