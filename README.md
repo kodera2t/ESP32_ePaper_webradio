@@ -73,3 +73,5 @@ GPIO15   - MOSI
 
 More details can be found in the original author's explanation at
 https://github.com/MrBuddyCasino/ESP32_MP3_Decoder
+Web interface explanation is in the original author's repository:
+https://github.com/n24bass/ESP32_MP3_Decoder
