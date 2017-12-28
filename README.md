@@ -12,7 +12,6 @@ and edit SSID and password in "Web Radio / Bluetooth Speaker" section.(no need t
 ```
 make makefs
 make copyfs
-make flashfs
 make flash
 ```
 will update everything on the board.
